@@ -8,6 +8,30 @@
   /* --main-line-height : 1.5; */
 }
 
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/playfair-display-v30-latin-700.woff2") format("woff2"), 
+  url("../fonts/playfair-display-v30-latin-700.woff") format("woff"); 
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/playfair-display-v30-latin-800.woff2") format("woff2"), 
+  url("../fonts/playfair-display-v30-latin-800.woff") format("woff"); 
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/playfair-display-v30-latin-900.woff2") format("woff2"), 
+  url("../fonts/playfair-display-v30-latin-900.woff") format("woff"); 
+}
+
 /* GENERAL */
 
 *,
@@ -33,10 +57,6 @@ body{
   height: 100%;
   margin: 0;
   padding: 0;
-  /* font-family: "Roboto", "Arial", sans-serif; */
-  /* font-size: 16px; */
-  /* font-weight: 400; */
-  /* line-height: var(--main-line-height); */
 }
 
 /* VISUALLY-HIDDEN */
@@ -56,13 +76,12 @@ body{
 
 /* CONTAINER */
 
-.container{
-  /* max-width: YOUR CONTAINER MAX-WIDTH PX HERE; */
+/* .container{
   margin-right: auto;
   margin-left: auto;
   padding-right: 20px;
   padding-left: 20px;
-}
+} */
 
 /* STICKY-FOOTER */
 
@@ -70,6 +89,63 @@ body{
   flex-grow: 1;
 }
 
+.site-header {
+  padding: 16px 0;
+  padding-bottom: 0;
+}
 
+.header-box {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 16px;
+}
 
+.search::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 0 16px;
+  background-image: url("../images/icons8-поиск.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
 
+.large-link {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 36px !important;
+  font-weight: 700;
+  line-height: 1 !important;
+  text-decoration: underline !important;
+}
+
+.large-link:hover {
+  text-decoration: none !important;
+}
+
+.hero-title {
+  font-family: "Playfair Display", "Times New Roman", serif !important;
+  font-size: 48px !important;
+  font-weight: 600 !important;
+}
+
+.thum-text {
+  position: absolute;
+  top: calc(50% - 21px);
+  left: calc(50% + 175px);
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(236, 238, 239);
+}
+
+.nav-pagination {
+  margin-bottom: 4rem;
+}
+
+.site-footer {
+  padding: 2.5rem 0;
+  color: #727272;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 0.05rem solid #e5e5e5;
+}
